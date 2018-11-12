@@ -15,6 +15,6 @@ class GetApplicationFileParam {
   var app_Name: String = _
   @Value("${moxiu.author}")
   var author: String = _
-  @RequestMapping(Array("/aaaa", "/bbb"))
+  @RequestMapping(Array("/getParam", "/test_value"))
   def fun() = "通过注解@Value 获取Application.properties中定义的变量：app.name=" + app_Name + "，moxiu.author" + author
 }
