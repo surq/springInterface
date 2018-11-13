@@ -12,6 +12,6 @@ object ApplicationRunner {
   def main(args: Array[String]) {
     SpringApplication.run(classOf[AppConf])
     // 公共队列调起
-    (new Thread(new TimmerTasker)).start
+//    (new Thread(new TimmerTasker)).start
   }
 }
