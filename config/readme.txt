@@ -1,3 +1,5 @@
+
+##########################################################
 关于application.properties 属性的配置
 1、以下必配置项,其它属性必须有但可以不配置
 additional.tomcat.connectors.flg=true
@@ -16,3 +18,7 @@ tomcat.connector.customizer.flg=true
 5、当additional.tomcat.connectors.flg=flase并且tomcat.connector.customizer.flg=flase时,走springboot配置文件 server.port的端口。
 当additional.tomcat.connectors.flg=flase并且tomcat.connector.customizer.flg=true时,走tomcat连接器的端口。
 当additional.tomcat.connectors.flg=true并且tomcat.connector.customizer.flg=false时,走springboot配置文件 server.port的端口和附加的Tomcat连接器端口。
+#######################################################################################
+6、jdk  要求1.8及1.8以上
+
+

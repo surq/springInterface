@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Configuration
  */
 @Configuration
 class ApplicationPropertiesBean {
+
+  // 是否配置 添加定制Tomcat连接器
+  @Value("${tomcat.connector.customizer.flg}")
+  var tomcat_flg: String = _
   @Value("${spring.server.port}")
   var port: String = _
   @Value("${spring.server.acceptorThreadCount}")
@@ -34,16 +38,11 @@ class ApplicationPropertiesBean {
   var maxFileSize: String = _
   @Value("${spring.server.MaxRequestSize}")
   var maxRequestSize: String = _
-
-  // 是否配置 添加定制Tomcat连接器
-  @Value("${tomcat.connector.customizer.flg}")
-  var tomcat_flg: String = _
-
+  // =================附加的Tomcat连接器==================
   // 是否配置 附加的Tomcat连接器
   @Value("${additional.tomcat.connectors.flg}")
   var additional_flg: String = _
   // Tomcat监听多个端口
   @Value("${spring.server.port.list}")
   var portList: String = _
-
 }
